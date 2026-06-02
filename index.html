@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Medical Expert System</title>
+
+  
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+
+<body>
+
+<!-- خلفية النقاط -->
+<div class="particles">
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<!-- شاشة البداية -->
+<div class="intro" id="intro">
+
+  <h1 class="title">🩺 نظام التشخيص الطبي</h1>
+
+  <div class="start-card">
+    <p>ابدأ فحص الأعراض الآن</p>
+    <button class="start-btn" onclick="start()">🚀 بدء التشخيص</button>
+  </div>
+
+</div>
+
+<!-- الصفحة الثانية -->
+<div class="main" id="main">
+
+  <div id="box">
+
+    <p id="question">هل لديك حرارة؟</p>
+
+    <div class="answers">
+      <button onclick="answer('yes')">نعم</button>
+      <button onclick="answer('no')">لا</button>
+    </div>
+
+  </div>
+
+  <p id="result"></p>
+
+</div>
+
+<!-- loading -->
+<div class="loading" id="loading" style="display:none;">
+  <div class="pulse"></div>
+  <p>🧠 جاري تحليل الأعراض...</p>
+</div>
+
+<!-- الفوتر -->
+<footer class="footer">
+<img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+  
+
+  <div class="name">
+    <span>👩‍💻 Developed by</span>
+    <span>ولاء سالم النويس</span>
+  </div>
+
+</footer>
+
+</body>
+</html>
